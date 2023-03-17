@@ -15,7 +15,7 @@
 }
 
 body{
-    background: var(--sky-blue);
+    background: var(--accent);
     font-size: 10px;
     font-family: Inter, 'sans-serif';
 }
@@ -324,3 +324,88 @@ nav ul a:hover::after{
     transform: translateY(-15px);
   }
 }
+
+/* about me */
+#about{
+margin: 2em 5em;
+}
+
+.timeline{
+    background: linear-gradient(#000, #000) no-repeat center/2px 100%;
+
+
+}
+
+.about-me-title{
+    text-align: center;
+    padding-top: 1em;
+    line-height: 2;
+}
+
+.about-me-title h2{
+    font-size: 2em;
+    position: relative;
+}
+
+.about-me-title h2::before{
+    content: "";
+    height: 15px;
+    top: 4px;
+    width: 35px;
+    border-left: 2px solid var(--sky-blue);
+    border-bottom: 2px solid var(--sky-blue);
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    left: 45%;
+
+}
+
+.about-me-title h2::after{
+    content: "";
+    height: 15px;
+    top: 4px;
+    width: 35px;
+    border-right: 2px solid var(--sky-blue);
+    border-top: 2px solid var(--sky-blue);
+    position: absolute;
+    z-index: 10;
+    right: 45%;
+}
+
+.about-me-title p{
+    font-size: 1.5em;
+}
+
+.timeline-item{
+    position: relative;
+    width: 50%;
+}
+
+
+
+
+.course-location{
+    padding: 0.6em;
+    font-size: 1.7em;
+    background-color: var(--black);
+    border-radius: 5px;
+    color: var(--text-color-main);
+}
+
+.course-title{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.course-content{
+    font-size: 1.2em;
+}
+/* 
+@media screen and (max-width: 1300px) {
+    .right{
+ 
+    }
+    
+    
+} */
