@@ -198,7 +198,7 @@ nav ul a:hover::after{
     justify-content: center;
     align-content: center;
     height: 100dvh;
-    background-image: url(/imgs/bg-img.jpg), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    background-image: url(imgs/bg-img.jpg), linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
