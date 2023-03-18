@@ -114,6 +114,7 @@ nav ul a:hover::after{
 
      #menu-btn{
         display: block;
+        margin-right: 1em;
      }
      .hamburger{
         position: fixed;
@@ -332,19 +333,20 @@ nav ul a:hover::after{
 
 /* about me */
 
-
 .about-title{
-    text-align: center;
     margin: 2em;
     line-height: 2;
 }
 
-.about-title h3{
+.about-title h2{
+    text-align: center;
+    width: 200px;  
+    margin: 0 auto;
     font-size: 2em;
     position: relative;
 }
 
-.about-title h3::before{
+.about-title h2::before{
     content: "";
     height: 15px;
     bottom: 0;
@@ -353,10 +355,10 @@ nav ul a:hover::after{
     border-bottom: 2px solid var(--sky-blue);
     position: absolute;
     z-index: 10;
-    left: 45%;
+    left: 0%;
 }
 
-.about-title h3::after{
+.about-title h2::after{
     content: "";
     height: 15px;
     top: 0;
@@ -365,7 +367,7 @@ nav ul a:hover::after{
     border-top: 2px solid var(--sky-blue);
     position: absolute;
     z-index: 10;
-    right: 45%;
+    right: 0%;
 }
 
 .about-title p{
@@ -558,3 +560,74 @@ nav ul a:hover::after{
       border-radius: 500px 0 0 500px;
     }
   }
+
+
+  /* work section */
+  
+  #work{
+    background-color: var(--black);
+    color: var(--text-color-main);
+    min-height: 300px;
+    display: grid;
+    
+  }
+
+  .work-title{
+    text-align: center;
+    line-height: 2;
+    padding: 1.5em;
+}
+
+.work-title h2{
+  display: block;
+  text-align: center;
+  width: 200px;  
+  margin: 0 auto;
+  font-size: 2em;
+  position: relative;
+
+}
+
+
+  .work-title h2::before{
+    content: "";
+    height: 15px;
+    bottom: 0;
+    width: 35px;
+    border-left: 2px solid var(--sky-blue);
+    border-bottom: 2px solid var(--sky-blue);
+    position: absolute;
+    z-index: 10;
+    left: 0%;
+}
+
+  .work-title h2::after{
+    content: "";
+    height: 15px;
+    top: 0;
+    width: 35px;
+    border-right: 2px solid var(--sky-blue);
+    border-top: 2px solid var(--sky-blue);
+    position: absolute;
+    z-index: 10;
+    right: 0%;
+}
+
+.work-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  cursor: pointer;
+  height: 100%;
+  width: 100vw;
+
+}
+
+.work-container h3{
+  font-size: 4em;
+}
+
+.work-container p{
+  color: var(--sky-blue);
+}
