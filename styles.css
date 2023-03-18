@@ -633,6 +633,7 @@ nav ul a:hover::after{
   transition: 200ms;
   text-align: center;
   margin: 2em;
+  cursor: pointer;
 
 }
 
