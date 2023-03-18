@@ -16,6 +16,8 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
 
 body{
@@ -517,7 +519,7 @@ nav ul a:hover::after{
   
   @media (max-width: 750px) {
     .timeline::after {
-      left: 90px;
+      left: 10px;
     }
   
     .container {
@@ -526,32 +528,37 @@ nav ul a:hover::after{
       padding-left: 120px;
       padding-right: 30px;
     }
+
+
   
     .container.right {
       left: 0%;
     }
+
+    .container.left, .container.right{
+      padding: 2em;
+    }
   
     .container.left::after, 
     .container.right::after {
-      left: 82px;
+      left: 0px;
     }
   
     .container.left::before,
     .container.right::before {
-      left: 100px;
+     left: 0px;
       border-color: transparent var(--sky-blue) transparent transparent;
     }
   
     .container.left .date,
     .container.right .date {
-      right: auto;
-      left: 15px;
+  display: none;
     }
   
     .container.left .icon,
     .container.right .icon {
       right: auto;
-      left: 146px;
+      left: 3em;
     }
   
     .container.left .content,
@@ -568,7 +575,7 @@ nav ul a:hover::after{
     background-color: var(--black);
     color: var(--text-color-main);
     min-height: 300px;
-    display: grid;
+
     
   }
 
@@ -615,19 +622,171 @@ nav ul a:hover::after{
 
 .work-flex{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;
-  cursor: pointer;
-  height: 100%;
-  width: 100vw;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 70%;
+  margin: 6em 0;
+}
+
+.work-container{
+  transition: 200ms;
+  text-align: center;
+  margin: 2em;
 
 }
 
+.work-container a{
+  text-decoration: none;
+  color: inherit
+}
+
 .work-container h3{
-  font-size: 4em;
+  font-size: 4.5em;
+
 }
 
 .work-container p{
   color: var(--sky-blue);
+  font-size: 1.5em;
+}
+
+.work-container h3:first-of-type{
+  margin-top: 0;
+}
+
+.work-container p:last-of-type{
+  margin-bottom: 1em;
+}
+
+.work-container:hover{
+  transform: translateY(2px);
+}
+
+
+/* contact */
+
+
+.contact-title h2{
+  display: block;
+  text-align: center;
+  width: 200px;  
+  margin: 1em auto;
+  font-size: 2em;
+  position: relative;
+}
+
+.contact-title h2::before{
+  content: "";
+  height: 15px;
+  bottom: 0;
+  width: 35px;
+  border-left: 2px solid var(--sky-blue);
+  border-bottom: 2px solid var(--sky-blue);
+  position: absolute;
+  z-index: 10;
+  left: 0%;
+}
+
+.contact-title h2::after{
+  content: "";
+  height: 15px;
+  top: 0;
+  width: 35px;
+  border-right: 2px solid var(--sky-blue);
+  border-top: 2px solid var(--sky-blue);
+  position: absolute;
+  z-index: 10;
+  right: 0%;
+}
+
+fieldset{
+  border: none;
+  border-bottom: 2px solid var(--sky-blue);
+  }
+
+  label{
+    font-size: 1.25rem;
+  }
+
+  form{
+  margin: 8em auto;
+  max-width: 600px;
+}
+
+input[type="text"], input[type="number"], input[type="email"]{
+  display: block;
+  margin: 0.5em 0;
+  width: 100%;
+  padding: 0.6em 0;
+  border-radius: 5px;
+  border: 1px solid var(--black);
+  background-color: transparent;
+  font-size: 1.125rem;
+  color: var(--black);
+}
+
+select{
+  display: block;
+  margin-top: 1rem;
+}
+
+textarea{
+  display: block;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type="submit"]{
+  width: 100%;
+  display: block;
+  padding: 1rem 1.2rem;
+  margin: 0.5rem 0;
+  background-color: var(--sky-blue); 
+  color: white;
+  border: none;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  transition: 300ms ease-in-out;
+}
+
+input[type="submit"]:hover{
+  opacity: 0.7;
+}
+
+
+
+@media screen and (max-width: 700px){
+
+  form{
+    max-width: 400px;
+    margin: 0 auto;
+
+  }
+  
+  label{
+    font-size: 1.2em;
+  }
+}
+
+
+@media screen and (max-width: 450px){
+
+  form{
+    max-width: 300px;
+    margin: 0 auto;
+
+  }
+  
+  
+input[type="text"], input[type="number"], input[type="email"], textarea{
+
+  padding: 0.3em 0;
+  font-size: 1rem;
+
+}
 }
